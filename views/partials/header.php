@@ -6,5 +6,4 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <title>Blog</title>
     </head>
-    <body class="min-h-screen bg-slate-900">
-        
+    <body class="min-h-screen bg-slate-800 text-slate-400">
