@@ -9,5 +9,5 @@ function dd($value) {
 }
 
 function currentPage($uri) {
-    return $_SERVER['REQUEST_URI'] === $uri;
+    return parse_url($_SERVER['REQUEST_URI'])['path'] === $uri;
 }
