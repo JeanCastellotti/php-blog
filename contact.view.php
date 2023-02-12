@@ -31,7 +31,7 @@
         </header>
 
         <main class="container mx-auto px-4 mt-10">
-            <h1 class="text-2xl text-slate-300">Home</h1>
+            <h1 class="text-2xl text-slate-300">Contact</h1>
         </main>
     </body>
 </html>
