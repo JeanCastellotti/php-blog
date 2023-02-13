@@ -1,7 +1,7 @@
 <?php
 
 function dd($value) {
-    echo '<pre class="bg-slate-900 text-slate-500 rounded p-4">';
+    echo '<pre>';
     var_dump($value);
     echo '</pre>';
 
