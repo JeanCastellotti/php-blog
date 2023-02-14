@@ -18,5 +18,11 @@
         >
             Contact
         </a>
+        <a 
+            href="/posts" 
+            class="<?= currentPage('/posts') ? 'bg-slate-700 text-slate-200' : 'bg-transparent' ?> hover:bg-slate-400 hover:text-slate-800 rounded px-2 py-1"
+        >
+            Posts
+        </a>
     </nav>
 </header>
