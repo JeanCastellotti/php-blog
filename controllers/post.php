@@ -3,7 +3,6 @@
 $config = require 'config.php';
 $db = new Database($config['database']);
 
-$heading = 'Post';
 $currentUserId = 1;
 
 $post = $db->query('SELECT * FROM posts WHERE id = :id', [
