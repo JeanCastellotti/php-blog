@@ -7,7 +7,7 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 function abort($statusCode = 404)
 {
     http_response_code($statusCode);
-    require "views/{$statusCode}.php";
+    require base_path("views/{$statusCode}.php");
     die();
 }
 
