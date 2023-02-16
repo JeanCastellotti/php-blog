@@ -11,4 +11,4 @@ $post = $db->query('SELECT * FROM posts WHERE id = :id', [
 
 authorize($post['user_id'] === $currentUserId);
 
-require 'views/post.view.php';
+require 'views/posts/show.view.php';
