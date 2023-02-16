@@ -2,7 +2,7 @@
 
 require 'Validator.php';
 
-$config = require 'config.php';
+$config = require base_path('config.php');
 $db = new Database($config['database']);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -31,4 +31,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 }
 
-require 'views/posts/create.view.php';
+view('/posts/create.view.php');

@@ -1,12 +1,12 @@
-<?php require 'views/partials/header.php' ?>
-<?php require 'views/partials/nav.php' ?>
+<?php require base_path('views/partials/header.php') ?>
+<?php require base_path('views/partials/nav.php') ?>
 
 <main class="container mx-auto px-4 mt-10">
     <h1 class="text-2xl text-slate-300 font-semibold">Create a post</h1>
 
     <form method="POST" class="space-y-5 mt-10">
         <div class="flex flex-col gap-3">
-            <input type="text" name="title" class="rounded p-4 max-w-lg w-full bg-slate-700" placeholder="title">
+            <input type="text" name="title" class="rounded p-4 max-w-lg w-full bg-slate-700" placeholder="title" value="<?= $_POST['title'] ?? '' ?>">
             <?php if (isset($errors['title'])) : ?>
                 <small>
                     <?= $errors['title'] ?>
@@ -31,4 +31,4 @@
     </form>
 </main>
 
-<?php require 'views/partials/footer.php' ?>
+<?php require base_path('views/partials/footer.php') ?>

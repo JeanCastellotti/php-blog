@@ -1,5 +1,5 @@
-<?php require 'views/partials/header.php' ?>
-<?php require 'views/partials/nav.php' ?>
+<?php require base_path('views/partials/header.php') ?>
+<?php require base_path('views/partials/nav.php') ?>
 
 <main class="container mx-auto px-4 mt-10">
     <h1 class="text-2xl text-slate-300 font-semibold">Posts</h1>
@@ -18,4 +18,4 @@
         post</a>
 </main>
 
-<?php require 'views/partials/footer.php' ?>
+<?php require base_path('views/partials/footer.php') ?>
