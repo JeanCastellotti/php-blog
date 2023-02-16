@@ -1,13 +1,11 @@
 <?php
 
-require 'Validator.php';
-
 $config = require base_path('config.php');
 $db = new Database($config['database']);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+$errors = [];
 
-    $errors = [];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (! Validator::string($_POST['title'], 1, 150)) {
         $errors['title'] = 'A title is required';
