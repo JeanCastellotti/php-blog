@@ -6,24 +6,27 @@
     <h1 class="text-2xl text-slate-300 font-semibold">Create a post</h1>
 
     <form method="POST" class="space-y-5 mt-10">
-        <div>
-            <input 
-                type="text" 
-                name="title" 
-                class="rounded p-4 max-w-lg w-full" 
-                placeholder="title">
+        <div class="flex flex-col gap-3">
+            <input type="text" name="title" class="rounded p-4 max-w-lg w-full bg-slate-700" placeholder="title">
+            <?php if (isset($errors['title'])) : ?>
+                <small>
+                    <?= $errors['title'] ?>
+                </small>
+            <?php endif; ?>
         </div>
 
-        <div>
-            <textarea 
-                name="content" 
-                class="rounded p-4 resize-none max-w-lg w-full" 
-                placeholder="content"></textarea>
+        <div class="flex flex-col gap-3">
+            <textarea name="content" class="rounded p-4 resize-none max-w-lg w-full bg-slate-700"
+                placeholder="content"><?= $_POST['content'] ?? '' ?></textarea>
+            <?php if (isset($errors['content'])) : ?>
+                <small>
+                    <?= $errors['content'] ?>
+                </small>
+            <?php endif; ?>
         </div>
 
-        <button 
-            type="submit" 
-            class="inline-block mt-10 bg-slate-700 text-slate-200 hover:bg-slate-400 hover:text-slate-800 rounded px-2 py-1">
+        <button type="submit"
+            class="inline-block mt-10 bg-gray-900 text-slate-400 hover:text-white hover:bg-indigo-500 rounded px-4 py-2">
             Create
         </button>
     </form>
