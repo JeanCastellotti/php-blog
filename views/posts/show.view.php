@@ -9,9 +9,9 @@
         <?= $post['content'] ?>
     </p>
     <form method="POST">
+        <input type="hidden" name="_method" value="DELETE">
         <input type="hidden" name="id" value="<?= $post['id'] ?>">
-        <button type="submit"
-            class="inline-block mt-10 bg-gray-900 text-slate-400 hover:text-white hover:bg-indigo-500 rounded px-4 py-2">
+        <button type="submit" class="inline-block mt-10 bg-gray-900 text-slate-400 hover:text-white hover:bg-indigo-500 rounded px-4 py-2">
             Delete
         </button>
     </form>

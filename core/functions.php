@@ -16,14 +16,23 @@ function currentPage($uri)
     return parse_url($_SERVER['REQUEST_URI'])['path'] === $uri;
 }
 
+function abort($statusCode = 404)
+{
+    http_response_code($statusCode);
+
+    require base_path("views/{$statusCode}.php");
+
+    die();
+}
+
 function authorize($condition, $statusCode = Response::FORBIDDEN)
 {
-    if (! $condition) {
+    if (!$condition) {
         abort($statusCode);
     }
 }
 
-function base_path($path) 
+function base_path($path)
 {
     return BASE_PATH . $path;
 }

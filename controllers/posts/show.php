@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $post = $db->query('SELECT * FROM posts WHERE id = :id', [
         'id' => $_POST['id']
     ])->findOrFail();
-    
+
     authorize($post['user_id'] === $currentUserId);
 
     $db->query('DELETE FROM posts WHERE id = :id', [
@@ -20,13 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     header('location: /posts');
     die();
-} else {    
+} else {
     $post = $db->query('SELECT * FROM posts WHERE id = :id', [
         'id' => $_GET['id']
     ])->findOrFail();
-    
+
     authorize($post['user_id'] === $currentUserId);
-    
+
     view('posts/show.view.php', [
         'post' => $post
     ]);

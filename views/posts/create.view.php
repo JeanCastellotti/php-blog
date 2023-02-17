@@ -15,8 +15,7 @@
         </div>
 
         <div class="flex flex-col gap-3">
-            <textarea name="content" class="rounded p-4 resize-none max-w-lg w-full bg-slate-700"
-                placeholder="content"><?= $_POST['content'] ?? '' ?></textarea>
+            <textarea name="content" class="rounded p-4 resize-none max-w-lg w-full bg-slate-700" placeholder="content"><?= $_POST['content'] ?? '' ?></textarea>
             <?php if (isset($errors['content'])) : ?>
                 <small>
                     <?= $errors['content'] ?>
@@ -24,8 +23,7 @@
             <?php endif; ?>
         </div>
 
-        <button type="submit"
-            class="inline-block mt-10 bg-gray-900 text-slate-400 hover:text-white hover:bg-indigo-500 rounded px-4 py-2">
+        <button type="submit" class="inline-block mt-10 bg-gray-900 text-slate-400 hover:text-white hover:bg-indigo-500 rounded px-4 py-2">
             Create
         </button>
     </form>

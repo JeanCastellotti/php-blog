@@ -13,8 +13,7 @@
         <?php endforeach; ?>
     </ul>
 
-    <a href="/posts/create"
-        class="inline-block mt-10 bg-slate-700 text-slate-200 hover:bg-slate-400 hover:text-slate-800 rounded px-2 py-1">Create
+    <a href="/posts/create" class="inline-block mt-10 bg-slate-700 text-slate-200 hover:bg-slate-400 hover:text-slate-800 rounded px-2 py-1">Create
         post</a>
 </main>
 

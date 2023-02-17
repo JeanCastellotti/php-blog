@@ -10,11 +10,11 @@ $errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    if (! Validator::string($_POST['title'], 1, 150)) {
+    if (!Validator::string($_POST['title'], 1, 150)) {
         $errors['title'] = 'A title is required';
     }
 
-    if (! Validator::string($_POST['content'], 1, 500)) {
+    if (!Validator::string($_POST['content'], 1, 500)) {
         $errors['content'] = 'A content is required';
     }
 
@@ -29,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'user_id' => 1
         ]);
     }
-
 }
 
 view('/posts/create.view.php');
