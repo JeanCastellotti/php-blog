@@ -8,13 +8,7 @@
     <p class="mt-10">
         <?= $post['content'] ?>
     </p>
-    <form method="POST">
-        <input type="hidden" name="_method" value="DELETE">
-        <input type="hidden" name="id" value="<?= $post['id'] ?>">
-        <button type="submit" class="inline-block mt-10 bg-gray-900 text-slate-400 hover:text-white hover:bg-indigo-500 rounded px-4 py-2">
-            Delete
-        </button>
-    </form>
+    <a href="/post/edit?id=<?= $post['id'] ?>" class="inline-block mt-10 bg-orange-500 text-white hover:bg-orange-600 rounded px-4 py-2">Edit</a>
 </main>
 
 <?php require base_path('views/partials/footer.php') ?>
